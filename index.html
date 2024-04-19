@@ -1,35 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valorant Fandom</title>
-    <link rel="icon" href="/assets/img/icon_valorant.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant Wiki</title>
+    <link rel="icon" href="/assets/img/icon_valorant.png" />
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/app.css" />
 
     <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Labrada:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Labrada:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
 
 </head>
 <body>
     <header>
-        <nav>
-            <img src="/assets/img/header_wallpaper.jpg" alt="wallpapaer valorant">
-            <ul>
-                <a href="#home" id="valorant">
-                    <img src="/assets/img/logo_navbar_valorant.png" alt="logo valorant">
-                </a>
-                <a href="#agent"><li>AGENTS</li></a>
-                <a href="#agent-roles"><li>ROLES</li></a>
-                <a href="#leaderboards"><li>LEADERBOARDS</li></a>
-                <a href="#maps"><li>MAPS</li></a>
-            </ul>
-        </nav>
+      <div class="wallpaper-header">
+        <img
+          src="/assets/img/header/header_wallpaper.jpg"
+          alt="wallpapaer valorant"
+        />
+      </div>
+
+      <nav>
+        <ul>
+          <a href="#home" id="valorant-logo">
+            <img
+              src="/assets/img/header/valorant_logo.png"
+              alt="logo valorant"
+            />
+          </a>
+          <a href="#agents"><li>AGENTS</li></a>
+          <a href="#roles"><li>ROLES</li></a>
+          <a href="#leaderboards"><li>LEADERBOARDS</li></a>
+          <a href="#maps"><li>MAPS</li></a>
+        </ul>
+      </nav>
     </header>
+
+    <main>
+        <!-- AGENTS SECTION -->
+        <section id="agents">
+            <article>
+                <h1>agents</h1>
+                <p>
+                Agents are characters in Valorant that have special abilities and
+                different roles. As of patch 8.07, there are 24 agents in Valorant
+                with 4 different roles. These agents include Brimstone, Phoenix,
+                Sage, Sova, Viper, Cypher, Reyna, Killjoy, Breach, Omen, Jett, Raze,
+                Skye, Yoru, Astra, Kay/O, Chamber, Neon, Fade, Harbor, Gekko,
+                Deadlock, Iso, and Clove. The best agents from each role in my
+                opinion are as follows.
+                </p>
+            </article>
+
+            <figure class="best-agent">
+                <div class="card-agent">
+                    <img src="assets/img/omen_wallpapers/VALORANT_Omen_Dark-fotor.png" alt="omen wallpaper"/>
+                </div>
+                <div class="card-agent">
+                    <img src="assets/img/jett_wallpapers/VALORANT_Jett_Red.jpg" alt="jett wallpaper"/>
+                </div>
+                <div class="card-agent">
+                    <img src="assets/img/cypher_wallpapers/VALORANT_Cypher_Dark-fotor.png" alt="cypher wallpaper"/>
+                </div>
+                <div class="card-agent">
+                    <img src="assets/img/skye_wallpapers/Skye_KeyArt_PR_3-fotor.png" alt="skye wallpaper"/>
+                </div>
+            </figure>
+        </section>
+        
+        <!-- ROLES SECTION -->
+        <section id="roles">
+            <h1 class="title">roles</h1>
+            
+
+            <figure class="role-agent">
+                <div class="card-role">
+                    <img src="assets/img/agent_roles/controller_role_logo.png" alt="controller logo"/>
+                    <h3>controller</h3>
+                    <p>
+                        Controllers are experts in slicing up dangerous territory to set their team up for success.
+                    </p>
+                </div>
+                <div class="card-role">
+                    <img src="assets/img/agent_roles/duelist_role_logo.png" alt="duelist logo"/>
+                    <h3>duelists</h3>
+                    <p>
+                        Duelists are self-sufficient fraggers who their team expects, through abilities and skills, 
+                        to get high frags and seek out engagements first.
+                    </p>
+                </div>
+                <div class="card-role">
+                    <img src="assets/img/agent_roles/sentinel_role_logo.png" alt="sentinel logo"/>
+                    <h3>sentinel</h3>
+                    <p class="role-desc">
+                        Defensive experts who can lock down areas and watch flanks, both on attacker and defender rounds.
+                    </p>
+                </div>
+                <div class="card-role">
+                    <img src="assets/img/agent_roles/initiator_role_logo.png" alt="initiator logo"/>
+                    <h3>initiator</h3>
+                    <p>
+                        Initiators challenge angles by setting up their team to enter contested ground and push defenders away.
+                    </p>
+                </div>
+            </figure>
+        </section>
+        
+    </main>
 </body>
 </html>
