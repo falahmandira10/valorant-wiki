@@ -1,10 +1,11 @@
 body {
-    background-color: rgb(220, 242, 241);
+    background-color: antiquewhite;
     margin: 0;
     height: 100vh;
     font-family: "Archivo", sans-serif;
 }
 
+/* HEADER */
 .wallpaper-header img {
     width: 100%;
     height: 300px;
@@ -13,6 +14,7 @@ body {
     margin-bottom: -10px;
 }
 
+/* NAVBAR */
 nav {
     background-color: rgb(35, 41, 49);
     position: sticky;
@@ -45,22 +47,18 @@ nav ul li:hover {
     transform: translateY(40%);
 }
 
+/* AGENTS SECTION */
 section {
-    margin-top: 80px;
-}
-
-article {
-    margin: 0 112px;
-}
-
-.title {
-    margin: 0 112px 20px;
+    margin: 50px 112px;
+    /* background-color: yellow; */
 }
 
 h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
     text-transform: uppercase;
+    line-height: 1.5;
+    /* background-color: blue; */
+    margin: 0;
 }
 
 p {
@@ -68,14 +66,16 @@ p {
     text-indent: 3%;
     line-height: 1.5;
     margin: 0;
+    /* background-color: rebeccapurple; */
 }
 
 .best-agent {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 50px 100px;
+    justify-content: space-around;
+    /* -webkit-margin: 70px 100px;
+    -ms-margin: 70px 100px; */
 }
 
 .card-agent {
@@ -93,28 +93,45 @@ p {
     border-radius: 0.8em;
 }
 
+/* ROLE SECTION */
+.title {
+    line-height: 2.25;
+}
+
 .role-agent {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-end;
     /* background-color: yellow; */
     height: 450px;
-    align-items: flex-end;
     margin: 0;
 }
 
 .card-role {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     height: 300px;
-    width: 200px;
-    border: 1px solid rgb(104, 100, 100);
-    border-radius: 0.8em;
+    width: 220px;
+    background-image: linear-gradient(135deg, #ffb199 15%, #ff0844 100%);
+    box-shadow: 2px 3px 6px 1px rgba(0,0,0,1);
     margin: 0 50px;
-    background-color: whitesmoke;
-    padding: 15px;
-    box-sizing: border-box;
+    background-color: rgb(236, 231, 225);
+    padding: 10px 15px;
+}
+
+/* border-radius dengan bantuan css generator */
+.card-role:nth-of-type(odd) {
+    border-radius: 30% 0 30% 0;
+    -webkit-border-radius: 30% 0 30% 0;
+    -moz-border-radius: 30% 0 30% 0;
+}
+
+.card-role:nth-of-type(even) {
+    border-radius: 0 30% 0 30%;
+    -webkit-border-radius: 0 30% 0 30%;
+    -moz-border-radius: 0 30% 0 30%;
 }
 
 .card-role > img{
@@ -128,13 +145,114 @@ p {
     align-self: flex-start;
 }
 
-figure p {
+.role-agent p {
+    overflow: hidden;
     text-indent: unset;
     font-size: 0.9em;
+    text-align: center;
 }
 
 h3 {
     font-size: 1.15em;
     text-transform: uppercase;
     text-align: center;
+    margin: 15px 0;
 }
+
+/* LEADERBOARD TABLE */
+.leaderboard-table {
+    display: flex;
+    justify-content: center;
+}
+
+table, th, td{
+    border: 1px solid rgb(35, 41, 49);
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+
+/* TABLE HEAD */
+thead th {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: rgb(35, 41, 49);
+    color: rgb(237, 237, 237);
+}
+
+thead th span {
+    text-transform: capitalize;
+    font-size: 0.7em;
+}
+
+/* Jika border collapse dimatikan akan terlihat border dari th di paling kiri akan menimpa border th di kanannya */
+thead th:nth-of-type(1),
+thead th:nth-of-type(2) {
+    border-right-color: unset;
+}
+
+thead th img {
+    height: 100px;
+}
+
+/* SUBTITLE  */
+tbody tr:nth-of-type(1) td {
+    text-align: center;
+    background-color: transparent;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 30px 0 5px;
+    color: rgb(118, 128, 124);
+}
+
+tbody tr:nth-of-type(1) td,
+table {
+    border: unset;
+}
+
+tbody span {
+    color: rgb(57, 181, 74);
+}
+
+/* TABLE CONTENT */
+tbody td {
+    text-align: center;
+    background-color: rgb(237, 237, 237);
+    font-weight: 500;
+    font-size: 1.25em;
+    padding: 20px;
+    border-top-width: 5px;
+    border-style: ridge;
+    border-left: unset;
+    border-right: unset;
+}
+
+tbody td:nth-of-type(2) {
+    border-right: unset;
+}
+
+tbody td:nth-of-type(3) {
+    /* Delete border yang menimpa border kanan dari td ke 2 */
+    border-left: unset;
+    text-align: left;
+}
+
+tbody tr:nth-of-type(1) td:nth-of-type(1){
+    font-size: 0.8em;
+    background-color: unset;
+}
+
+tbody tr:nth-of-type(1) td:nth-of-type(3) {
+    visibility: hidden;
+}
+
+tbody tr td:nth-of-type(1){
+    font-weight: 800;
+    font-size: 2em;
+    background-color: blanchedalmond;
+}
+
