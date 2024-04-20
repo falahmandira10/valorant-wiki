@@ -18,33 +18,40 @@ body {
 nav {
     background-color: rgb(35, 41, 49);
     position: sticky;
-    --nav-height: 50px;
+    top: 0;
 }
 
 nav ul {
-    list-style-type: none;
     margin-top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
 }
 
-nav ul a {
+nav a {
     text-decoration: none;
 }
-nav ul a li {
+nav li {
     color: rgb(237, 237, 237);
-    display: inline-block;
-    padding: 20px 10px;
+    list-style-type: none;
+    padding-block: 20px;
     border: 0.25em solid transparent;
+    /* background-color: yellow ; */
+    box-sizing: border-box;
 }
 
-nav ul li:hover {
+nav li:hover {
     cursor: pointer;
     color: rgb(241, 209, 138);
     border-bottom: 0.25em solid rgb(247, 56, 89);
+    /* background-color: yellow ; */
 }
 
 #valorant-logo img {
-    height: calc(var(--nav-height) - (1/5*var(--nav-height)));
-    transform: translateY(40%);
+    height: 50px;
+    transform: translateY(5%);
+    /* background-color: red; */
 }
 
 /* AGENTS SECTION */
@@ -75,7 +82,7 @@ p {
     flex-wrap: wrap;
     justify-content: space-around;
     /* -webkit-margin: 70px 100px;
-    -ms-margin: 70px 100px; */
+    -moz-margin: 70px 100px; */
 }
 
 .card-agent {
@@ -171,7 +178,7 @@ table, th, td{
 
 table {
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
 }
 
 th:first-child, 
@@ -274,3 +281,20 @@ tbody tr td:nth-of-type(3){
     background-color: rgba(227, 244, 244, 0.6);
 }
 
+.maps-container {
+    /* background-color: blue; */
+    height: 450px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4em;
+}
+
+.card-map {
+    width: 450px;
+    background-color: burlywood;
+    overflow: auto hidden;
+    /* border radius dengan bantuan fancy border radius generator */
+    border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
+    -webkit-border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
+    -moz-border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
+}
