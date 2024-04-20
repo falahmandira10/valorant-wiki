@@ -1,5 +1,5 @@
 body {
-    background-color: antiquewhite;
+    background-color: #fcfff9  ;
     margin: 0;
     height: 100vh;
     font-family: "Archivo", sans-serif;
@@ -174,12 +174,16 @@ table {
     width: 90%;
 }
 
+th:first-child, 
+td:nth-child(2){
+    width: 15%;
+}
 
 /* TABLE HEAD */
 thead th {
     font-size: 1.5em;
     text-transform: uppercase;
-    background-color: rgb(35, 41, 49);
+    background-color: rgb(9, 38, 53);
     color: rgb(237, 237, 237);
 }
 
@@ -215,18 +219,20 @@ table {
 }
 
 tbody span {
-    color: rgb(57, 181, 74);
+    color: rgb(145, 199, 136);
 }
 
 /* TABLE CONTENT */
 tbody td {
     text-align: center;
-    background-color: rgb(237, 237, 237);
+    background-color: rgba(237, 237, 237, 0.45);
     font-weight: 500;
     font-size: 1.25em;
     padding: 20px;
-    border-top-width: 5px;
     border-style: ridge;
+    border-color: rgb(248, 246, 244);
+    border-top-width: thick;
+    border-bottom-width: thick;
     border-left: unset;
     border-right: unset;
 }
@@ -250,9 +256,21 @@ tbody tr:nth-of-type(1) td:nth-of-type(3) {
     visibility: hidden;
 }
 
+tbody tr:nth-of-type(1) td:nth-of-type(2) {
+    background-color: unset;
+}
+
 tbody tr td:nth-of-type(1){
     font-weight: 800;
     font-size: 2em;
-    background-color: blanchedalmond;
+    background-color: rgba(196, 223, 223, 0.45);
+}
+
+tbody tr td:nth-of-type(2){
+    background-color: rgba(210, 233, 233, 0.47);
+}
+
+tbody tr td:nth-of-type(3){
+    background-color: rgba(227, 244, 244, 0.6);
 }
 
