@@ -1,0 +1,24 @@
+/* Style the header */
+header {
+    overflow: hidden;
+    background-color: #333; /* Warna latar belakang header */
+    position: sticky;
+    top: 0;
+}
+
+/* Style the navbar links */
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /* Warna teks link */
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+/* Style the menu icon (jika ada) */
+nav a img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
