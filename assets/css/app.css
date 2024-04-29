@@ -5,6 +5,9 @@ body {
     font-family: "Archivo", sans-serif;
 }
 
+/* section:target {
+    
+} */
 /* HEADER */
 header .wallpaper-header img {
     /* display block untuk menghilangkan margin-bottom default dari elemen img */
@@ -21,9 +24,6 @@ header nav {
     align-items: center;
     background-color: rgb(35, 41, 49);
     position: sticky;
-    top: 0;
-    gap: 0.15em;
-    height: auto;
 }
 
 header nav a {
@@ -59,19 +59,19 @@ h1 {
     font-size: 2.5em;
     text-transform: uppercase;
     line-height: 1.5;
-    /* background-color: blue; */
     margin: 0;
+    /* background-color: blue; */
 }
 
 p {
     font-size: 1.25em;
     text-indent: 3%;
     line-height: 1.5;
-    margin: 0;
     /* background-color: rebeccapurple; */
 }
 
 .best-agent {
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -95,6 +95,13 @@ p {
     border-radius: 0.8em;
 }
 
+
+.card-agent > img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: all 0.25s ease-in;
+}
+
 /* ROLE SECTION */
 .title {
     line-height: 2.25;
@@ -105,9 +112,9 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    /* background-color: yellow; */
     height: 450px;
     margin: 0;
+    /* background-color: yellow; */
 }
 
 .card-role {
@@ -194,7 +201,7 @@ thead th span {
     font-size: 0.7em;
 }
 
-/* Jika border collapse dimatikan akan terlihat border dari th di paling kiri akan menimpa border th di kanannya */
+/* Jika border collapse dimatikan akan terlihat border dari th di posisi kiri akan menimpa border th di sebelah kanannya */
 thead th:nth-of-type(1),
 thead th:nth-of-type(2) {
     border-right-color: unset;
@@ -276,20 +283,80 @@ tbody tr td:nth-of-type(3){
     background-color: rgba(227, 244, 244, 0.6);
 }
 
+/* MAPS SECTION */
 .maps-container {
-    /* background-color: blue; */
-    height: 450px;
+    height: auto;
     display: flex;
-    justify-content: flex-start;
-    gap: 4em;
+    align-items: center;
+    gap: 2em;
+    overflow: hidden;
+    /* background-color: blue; */
+    
 }
 
-.card-map {
-    width: 450px;
-    background-color: burlywood;
-    overflow: auto hidden;
-    /* border radius dengan bantuan fancy border radius generator */
+.map-photos:first-of-type {
+    margin-left: 2em;
+}
+
+.map-photos:last-of-type {
+    margin-right: 2em;
+}
+
+.map-photos img {
+    width: 390px;
     border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
     -webkit-border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
     -moz-border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
+    box-shadow: 2px 3px 6px 1px rgba(0,0,0,1);
+}
+.map-photos img:hover {
+    cursor: pointer;
+}
+
+/* PARAGRAPH EFFECT */
+::selection {
+    background-color: hotpink;
+    color: white;
+}
+
+
+/* FOOTER SECTION */
+footer {
+    height: 300px;
+    background-color: rgb(35, 41, 49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot-img-container {
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.desc-footer img {
+    display: flex;
+    width: 100px;
+    /* background-color: aqua; */
+}
+
+h6 {
+    color: rgb(237, 237, 237);
+    margin: 0 0 15px 0;
+    font-size: 0.8em;
+    /* background-color: powderblue; */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    color: rgb(237, 237, 237);
+    /* background-color: #ff0844; */
+}
+
+.social-media a {
+    /* text-decoration: none; */
+    color: rgb(237, 237, 237);
 }

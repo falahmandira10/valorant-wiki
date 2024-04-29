@@ -1,5 +1,5 @@
-const listOfCardElements = document.querySelectorAll('.card');
-const cardContainer = document.querySelector('.card-container');
+const listOfCardElements = document.querySelectorAll('.map-photos');
+const cardContainer = document.querySelector('.maps-container');
 
 listOfCardElements.forEach((cardElement, index) => {
   cardElement.addEventListener('click', () => {
