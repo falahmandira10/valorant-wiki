@@ -5,10 +5,16 @@ body {
     font-family: "Archivo", sans-serif;
 }
 
-/* section:target {
+main {
+    display: flex;
+    flex-direction: column;
+}
     
-} */
 /* HEADER */
+header {
+    width: 100%;
+}
+
 header .wallpaper-header img {
     /* display block untuk menghilangkan margin-bottom default dari elemen img */
     display: block;
@@ -52,7 +58,7 @@ header nav img {
 /* AGENTS SECTION */
 section {
     margin: 50px 112px;
-    /* background-color: yellow; */
+    background-color: red;
 }
 
 h1 {
@@ -110,11 +116,12 @@ p {
 .role-agent {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
     height: 450px;
-    margin: 0;
-    /* background-color: yellow; */
+    width: 100%;
+    background-color: yellow;
 }
 
 .card-role {
@@ -122,10 +129,9 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     height: 300px;
-    width: 220px;
+    width: 180px;
     background-image: linear-gradient(135deg, #ffb199 15%, #ff0844 100%);
     box-shadow: 2px 3px 6px 1px rgba(0,0,0,1);
-    margin: 0 50px;
     background-color: rgb(236, 231, 225);
     padding: 10px 15px;
 }
@@ -172,6 +178,7 @@ h3 {
 .leaderboard-table {
     display: flex;
     justify-content: center;
+    /* background-color: yellow; */
 }
 
 table, th, td{
@@ -337,7 +344,7 @@ footer {
 
 .desc-footer img {
     display: flex;
-    width: 100px;
+    width: 150px;
     /* background-color: aqua; */
 }
 
@@ -359,4 +366,167 @@ h6 {
 .social-media a {
     /* text-decoration: none; */
     color: rgb(237, 237, 237);
+}
+
+
+/* MEDIA QUERY DI IPAD PRO TIDAK DIBUAT KARENA SIZE SCREEN LAPTOP YANG TIDAK MEMUNGKINKAN */
+@media screen and (max-width: 1024px)  {
+    /* AGENTS SECTION */
+    h1 {
+        font-size: 2em;
+    }
+
+    .card-agent {
+        height: 220px;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+    
+    /* ROLES SECTION */
+    .card-role {
+        height: 200px;
+        width: 120px;
+    }
+
+    .role-agent {
+        height: 300px;
+    }
+    
+    .role-agent p {
+        font-size: 0.6em;
+    }
+    
+    h3 {
+        font-size: 0.8em;
+    }
+
+}
+
+@media screen and (max-width: 576px)  {
+    /* HEADER */
+    header .wallpaper-header img {
+        height: 150px;
+    }
+    
+    header nav a {
+        font-size: 0.6em;
+        padding: 15px;
+    }
+        
+    header nav img {
+        padding-left: 20px;
+        height: 25px;
+    }
+    
+    /* SECTION */
+    section {
+        margin: 40px 90px 0 42px;
+    }
+
+    /* AGENTS SECTION */
+    h1 {
+        font-size: 1em;
+    }
+
+    .best-agent {
+        margin-top: 10px;
+        row-gap: 1.5em;
+    }
+
+    .card-agent {
+        height: 145px;
+    }
+    
+    p {
+        font-size: 0.7em;
+    }
+    
+    /* ROLES SECTION */
+    
+    .card-role > img{
+        height: 25%;
+    }
+
+    .card-role {
+        height: 100px;
+        width: 60px;
+    }
+
+    .role-agent {
+        height: 300px;
+        row-gap: 1em;
+    }
+    
+    .role-agent p {
+        font-size: 0.1em;
+    }
+    
+    h3 {
+        font-size: 0.4em;
+        margin: 5px 0;
+    }
+
+    /* LEADERBOARDS SECTION */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    thead th {
+        font-size: 0.8em;
+    }
+    
+    thead th span {
+        font-size: 0.7em;
+    }
+
+    thead th img {
+        height: 50px;
+    }
+
+    tbody tr:nth-of-type(1) td {
+        font-size: 0.5em;
+        font-weight: 600;
+        padding: 20px 0 5px;
+    }
+
+    tbody tr:nth-of-type(1) td:nth-of-type(1){
+        font-size: 0.5em;
+    }
+
+    tbody td {
+        font-weight: 500;
+        font-size: 0.7em;
+        padding: 10px;
+    }
+
+    tbody tr td:nth-of-type(1){
+        font-weight: 800;
+        font-size: 1.5em;
+    }
+
+    /* MAPS SECTION */
+    .maps-container {
+        gap: 1em;
+    }
+
+    .map-photos img {
+        width: 90px;
+    
+    }
+
+    /* main {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    main aside {
+        order: -1;
+    } */
+
+    footer {
+        height: 200px;
+    }
 }
