@@ -19,7 +19,7 @@ header .wallpaper-header img {
     /* display block untuk menghilangkan margin-bottom default dari elemen img */
     display: block;
     width: 100%;
-    height: 300px;
+    height: 40vmin;
     object-fit: cover;
 }
 
@@ -38,7 +38,8 @@ header nav a {
     list-style-type: none;
     border: 0.25em solid transparent;
     /* background-color: yellow ; */
-    padding: 20px;
+    padding: 1.2em;
+    font-size: 1.2vmax;
 }
 
 header nav a:hover {
@@ -49,20 +50,24 @@ header nav a:hover {
 }
 
 header nav img {
-    padding-left: 20px;
-    height: 45px;
+    padding-left: 2%;
+    height: 6vmin;
     /* transform: translateY(5%); */
     /* background-color: red; */
 }
 
 /* AGENTS SECTION */
 section {
-    margin: 50px 112px;
-    background-color: red;
+    margin: 5% 30% 0 10%;
+    /* background-color: red; */
+}
+
+section:last-of-type {
+    margin-bottom: 5%;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2vmax;
     text-transform: uppercase;
     line-height: 1.5;
     margin: 0;
@@ -70,24 +75,25 @@ h1 {
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 1.4vmax;
     text-indent: 3%;
     line-height: 1.5;
     /* background-color: rebeccapurple; */
 }
 
 .best-agent {
-    margin-top: 40px;
+    margin-top: 1%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    row-gap: 1.5em;
+    justify-content: space-evenly;
     /* -webkit-margin: 70px 100px;
     -moz-margin: 70px 100px; */
 }
 
 .card-agent {
-    height: 300px;
+    height: 30vmin;
     aspect-ratio: 1/1.5;
     border-radius: 0.8em;
     /* box-shadow dengan bantuan css generator */
@@ -119,7 +125,7 @@ p {
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
-    height: 450px;
+    height: 60vmin;
     width: 100%;
     background-color: yellow;
 }
@@ -127,13 +133,14 @@ p {
 .card-role {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height: 300px;
-    width: 180px;
+    justify-content: center;
+    gap: 0.5em;
+    height: 65%;
+    width: 19%;
     background-image: linear-gradient(135deg, #ffb199 15%, #ff0844 100%);
     box-shadow: 2px 3px 6px 1px rgba(0,0,0,1);
     background-color: rgb(236, 231, 225);
-    padding: 10px 15px;
+    padding: 1% 2%;
 }
 
 /* border-radius dengan bantuan css generator */
@@ -163,15 +170,15 @@ p {
 .role-agent p {
     overflow: hidden;
     text-indent: unset;
-    font-size: 0.9em;
     text-align: center;
+    font-size: 0.7em;
 }
 
 h3 {
-    font-size: 1.15em;
+    font-size: 1em;
     text-transform: uppercase;
     text-align: center;
-    margin: 15px 0;
+    margin: 0;
 }
 
 /* LEADERBOARD TABLE */
@@ -197,7 +204,7 @@ td:nth-child(2){
 
 /* TABLE HEAD */
 thead th {
-    font-size: 1.5em;
+    font-size: 1.8vmax;
     text-transform: uppercase;
     background-color: rgb(9, 38, 53);
     color: rgb(237, 237, 237);
@@ -205,7 +212,7 @@ thead th {
 
 thead th span {
     text-transform: capitalize;
-    font-size: 0.7em;
+    font-size: 1.2vmax;
 }
 
 /* Jika border collapse dimatikan akan terlihat border dari th di posisi kiri akan menimpa border th di sebelah kanannya */
@@ -215,18 +222,23 @@ thead th:nth-of-type(2) {
 }
 
 thead th img {
-    height: 100px;
+    height: 15vmin;
 }
 
 /* SUBTITLE  */
 tbody tr:nth-of-type(1) td {
     text-align: center;
     background-color: transparent;
-    font-size: 0.8em;
+    font-size: 1vmax;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 30px 0 5px;
+    padding: 5% 0 2%;
     color: rgb(118, 128, 124);
+}
+
+tbody tr:nth-of-type(1) td:nth-of-type(1){
+    font-size: 1vmax;
+    background-color: unset;
 }
 
 tbody tr:nth-of-type(1) td,
@@ -243,8 +255,8 @@ tbody td {
     text-align: center;
     background-color: rgba(237, 237, 237, 0.45);
     font-weight: 500;
-    font-size: 1.25em;
-    padding: 20px;
+    font-size: 1.3vmax;
+    padding: 4%;
     border-style: ridge;
     border-color: rgb(248, 246, 244);
     border-top-width: thick;
@@ -263,10 +275,6 @@ tbody td:nth-of-type(3) {
     text-align: left;
 }
 
-tbody tr:nth-of-type(1) td:nth-of-type(1){
-    font-size: 0.8em;
-    background-color: unset;
-}
 
 tbody tr:nth-of-type(1) td:nth-of-type(3) {
     visibility: hidden;
@@ -278,7 +286,7 @@ tbody tr:nth-of-type(1) td:nth-of-type(2) {
 
 tbody tr td:nth-of-type(1){
     font-weight: 800;
-    font-size: 2em;
+    font-size: 2vmax;
     background-color: rgba(196, 223, 223, 0.45);
 }
 
@@ -295,10 +303,9 @@ tbody tr td:nth-of-type(3){
     height: auto;
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
     overflow: hidden;
     /* background-color: blue; */
-    
 }
 
 .map-photos:first-of-type {
@@ -310,7 +317,7 @@ tbody tr td:nth-of-type(3){
 }
 
 .map-photos img {
-    width: 390px;
+    width: 35vmin;
     border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
     -webkit-border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
     -moz-border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
@@ -326,10 +333,9 @@ tbody tr td:nth-of-type(3){
     color: white;
 }
 
-
 /* FOOTER SECTION */
 footer {
-    height: 300px;
+    height: 15em;
     background-color: rgb(35, 41, 49);
     display: flex;
     align-items: center;
@@ -344,14 +350,15 @@ footer {
 
 .desc-footer img {
     display: flex;
-    width: 150px;
+    width: 30vmin;
     /* background-color: aqua; */
 }
 
 h6 {
     color: rgb(237, 237, 237);
     margin: 0 0 15px 0;
-    font-size: 0.8em;
+    font-size: 0.8vmax;
+    text-align: center;
     /* background-color: powderblue; */
 }
 
@@ -368,97 +375,14 @@ h6 {
     color: rgb(237, 237, 237);
 }
 
-
 /* MEDIA QUERY DI IPAD PRO TIDAK DIBUAT KARENA SIZE SCREEN LAPTOP YANG TIDAK MEMUNGKINKAN */
-@media screen and (max-width: 1024px)  {
-    /* AGENTS SECTION */
-    h1 {
-        font-size: 2em;
-    }
-
-    .card-agent {
-        height: 220px;
-    }
-    
-    p {
-        font-size: 1em;
-    }
-    
-    /* ROLES SECTION */
-    .card-role {
-        height: 200px;
-        width: 120px;
-    }
-
-    .role-agent {
-        height: 300px;
-    }
-    
-    .role-agent p {
-        font-size: 0.6em;
-    }
-    
-    h3 {
-        font-size: 0.8em;
-    }
-
-}
-
 @media screen and (max-width: 576px)  {
-    /* HEADER */
-    header .wallpaper-header img {
-        height: 150px;
-    }
-    
-    header nav a {
-        font-size: 0.6em;
-        padding: 15px;
-    }
-        
-    header nav img {
-        padding-left: 20px;
-        height: 25px;
-    }
-    
     /* SECTION */
     section {
-        margin: 40px 90px 0 42px;
+        margin: 40px 40px 0 40px;
     }
 
-    /* AGENTS SECTION */
-    h1 {
-        font-size: 1em;
-    }
-
-    .best-agent {
-        margin-top: 10px;
-        row-gap: 1.5em;
-    }
-
-    .card-agent {
-        height: 145px;
-    }
-    
-    p {
-        font-size: 0.7em;
-    }
-    
     /* ROLES SECTION */
-    
-    .card-role > img{
-        height: 25%;
-    }
-
-    .card-role {
-        height: 100px;
-        width: 60px;
-    }
-
-    .role-agent {
-        height: 300px;
-        row-gap: 1em;
-    }
-    
     .role-agent p {
         font-size: 0.1em;
     }
@@ -468,65 +392,4 @@ h6 {
         margin: 5px 0;
     }
 
-    /* LEADERBOARDS SECTION */
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    thead th {
-        font-size: 0.8em;
-    }
-    
-    thead th span {
-        font-size: 0.7em;
-    }
-
-    thead th img {
-        height: 50px;
-    }
-
-    tbody tr:nth-of-type(1) td {
-        font-size: 0.5em;
-        font-weight: 600;
-        padding: 20px 0 5px;
-    }
-
-    tbody tr:nth-of-type(1) td:nth-of-type(1){
-        font-size: 0.5em;
-    }
-
-    tbody td {
-        font-weight: 500;
-        font-size: 0.7em;
-        padding: 10px;
-    }
-
-    tbody tr td:nth-of-type(1){
-        font-weight: 800;
-        font-size: 1.5em;
-    }
-
-    /* MAPS SECTION */
-    .maps-container {
-        gap: 1em;
-    }
-
-    .map-photos img {
-        width: 90px;
-    
-    }
-
-    /* main {
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-
-    main aside {
-        order: -1;
-    } */
-
-    footer {
-        height: 200px;
-    }
 }
