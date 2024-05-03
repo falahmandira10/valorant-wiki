@@ -7,9 +7,20 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
+    padding: 5vmax 7.5vmax;
+    gap: 5vmax;
 }
-    
+
+#content {
+    flex: 4;
+    display: flex;
+    /* flex-flow: <'flex-direction'> and <'flex-wrap'> */
+    flex-flow: column nowrap;
+    gap: 5vmax;
+}
+
+
+
 /* HEADER */
 header {
     width: 100%;
@@ -57,15 +68,6 @@ header nav img {
 }
 
 /* AGENTS SECTION */
-section {
-    margin: 5% 30% 0 10%;
-    /* background-color: red; */
-}
-
-section:last-of-type {
-    margin-bottom: 5%;
-}
-
 h1 {
     font-size: 2vmax;
     text-transform: uppercase;
@@ -93,7 +95,7 @@ p {
 }
 
 .card-agent {
-    height: 30vmin;
+    height: 35vmin;
     aspect-ratio: 1/1.5;
     border-radius: 0.8em;
     /* box-shadow dengan bantuan css generator */
@@ -106,7 +108,6 @@ p {
     object-fit: cover;
     border-radius: 0.8em;
 }
-
 
 .card-agent > img:hover {
     transform: scale(1.2);
@@ -127,7 +128,8 @@ p {
     flex-wrap: wrap;
     height: 60vmin;
     width: 100%;
-    background-color: yellow;
+    margin: 0;
+    /* background-color: yellow; */
 }
 
 .card-role {
@@ -299,12 +301,18 @@ tbody tr td:nth-of-type(3){
 }
 
 /* MAPS SECTION */
-.maps-container {
-    height: auto;
-    display: flex;
-    align-items: center;
-    gap: 1em;
+aside {
+    flex: 2;
     overflow: hidden;
+}
+aside h1 {
+    position: absolute;
+}
+
+.maps-container {
+    display: flex;
+    height: auto;
+    gap: 1em;
     /* background-color: blue; */
 }
 
@@ -317,7 +325,8 @@ tbody tr td:nth-of-type(3){
 }
 
 .map-photos img {
-    width: 35vmin;
+    margin-top: 10vmin;
+    height: 7.5vmax;
     border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
     -webkit-border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
     -moz-border-radius: 52% 48% 100% 0% / 32% 0% 100% 68%;
@@ -376,10 +385,9 @@ h6 {
 }
 
 /* MEDIA QUERY DI IPAD PRO TIDAK DIBUAT KARENA SIZE SCREEN LAPTOP YANG TIDAK MEMUNGKINKAN */
-@media screen and (max-width: 576px)  {
-    /* SECTION */
-    section {
-        margin: 40px 40px 0 40px;
+@media screen and (max-width: 768px)  {
+    main {
+        flex-flow: column nowrap;
     }
 
     /* ROLES SECTION */
@@ -391,5 +399,9 @@ h6 {
         font-size: 0.4em;
         margin: 5px 0;
     }
-
+    
+    /* MAPS SECTION */
+    .map-photos img {
+        height: 6vmax;
+    }
 }
