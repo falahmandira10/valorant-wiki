@@ -1,8 +1,18 @@
+html { 
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #fcfff9  ;
     margin: 0;
     height: 100vh;
     font-family: "Archivo", sans-serif;
+}
+
+#agents, #roles,
+#leaderboards, #maps {
+    margin: 0;
+    padding-top: 70px;
 }
 
 /* HEADER */
@@ -67,6 +77,20 @@ blockquote {
     margin: unset;
 }
 
+main {
+    display: flex;
+    padding: 0 7.5vmax 5vmax;
+    gap: 5vmax;
+}
+
+#content {
+    flex: 4;
+    display: flex;
+    /* flex-flow: <'flex-direction'> and <'flex-wrap'> */
+    flex-flow: column nowrap;
+    gap: 5vmax;
+}
+
 /* AGENTS SECTION */
 h1 {
     font-size: 2vmax;
@@ -106,7 +130,6 @@ h1 {
     transform: scale(1.2);
     cursor: pointer;
     transition: all 0.25s ease-in;
-    z-index: 0;
 }
 
 /* ROLE SECTION */
@@ -294,19 +317,6 @@ tbody tr td:nth-of-type(3){
 }
 
 /* MAPS SECTION */
-main {
-    display: flex;
-    padding: 5vmax 7.5vmax;
-    gap: 5vmax;
-}
-
-#content {
-    flex: 4;
-    display: flex;
-    /* flex-flow: <'flex-direction'> and <'flex-wrap'> */
-    flex-flow: column nowrap;
-    gap: 5vmax;
-}
 
 aside {
     flex: 2;
